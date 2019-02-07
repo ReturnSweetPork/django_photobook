@@ -1,0 +1,13 @@
+{% extends "photo/base.html" %}
+{% block bb %}
+<h1>여기는 edit입니다</h1>   
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="title" value="{{photo.title}}"/>
+    <input type="text" name="content"value="{{photo.content}}"/>
+    <input type="submit" value="Submit"/>
+</form>
+<hr>
+
+{% endblock %}
